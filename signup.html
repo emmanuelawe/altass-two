@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Left side of the page -->
+      <section class="left">
+        <div class="left-wrapper">
+          <img src="/public/assets/logo.png" alt="Logo" />
+          <h1>For Individuals</h1>
+          <p class="desktop_s">
+            Start benefiting from the wellness experience. For companies looking
+            on increasing productivity, and improving organization wellness.
+          </p>
+          <p class="mobile_s">
+            Inspiring wholesome harmony for the mind, body and spirit, for
+            everyone, everywhere.
+          </p>
+        </div>
+      </section>
+
+      <!-- Right side of the page -->
+      <section class="right">
+        <div class="card">
+          <form>
+            <div>
+              <label for="firstName"><strong>First Name</strong></label>
+              <input type="text" name="firstName" id="firstName" />
+            </div>
+
+            <div>
+              <label for="lastName"><strong>Last Name</strong></label>
+              <input type="text" name="lastName" id="lastName" />
+            </div>
+
+            <div>
+              <label for="gender"><strong>Gender</strong></label>
+              <div class="select_container_g">
+                <select class="span_two" name="gender" id="gender">
+                  <option value="select">Select here</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                <div class="icon_container_g">
+                  <img src="/public/assets/u_angle-down.png" alt="dropdown" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="date"><strong>Date of Birth</strong></label>
+              <div class="date_container" id="date">
+                <input
+                  type="text"
+                  placeholder="Select here"
+                  onfocus="(this.type='date')"
+                />
+                <div class="icon_container_d">
+                  <img
+                    src="/public/assets/u_a_calendar-alt.png"
+                    alt="dropdown"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="weight"><strong>Weight (KG)</strong></label>
+              <input type="text" placeholder="Enter Weight" id="weight" />
+            </div>
+
+            <div>
+              <label for="height"><strong>Height (CM)</strong></label>
+              <input type="text" placeholder="Enter height here" id="height" />
+            </div>
+
+            <div class="span_two">
+              <label for="activity"><strong>Activity Level</strong></label>
+              <div class="select_container_a">
+                <select name="activity" id="activity" class="span_two">
+                  <option value="select">Select here</option>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+                <div class="icon_container_a">
+                  <img src="/public/assets/u_angle-down.png" alt="dropdown" />
+                </div>
+              </div>
+            </div>
+
+            <div class="span_two">
+              <label for="password"><strong>Password</strong></label>
+              <div class="input_container_p">
+                <input type="text" id="password" class="span_two" />
+                <div class="icon_container_p">
+                  <img src="/public/assets/show.png" alt="eye" />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="span_two">
+              <strong>Register</strong>
+            </button>
+          </form>
+
+          <p class="desktop_s">
+            By clicking Register, you agree to our
+            <strong
+              style="color: hsla(174, 62%, 47%, 1); text-decoration: underline"
+              >Terms of Use</strong
+            >
+            and our
+            <strong
+              style="color: hsla(174, 62%, 47%, 1); text-decoration: underline"
+              >Privacy Policy</strong
+            >
+          </p>
+        </div>
+        <p class="mobile_s">
+          By clicking Register, you agree to our
+          <strong
+            style="color: hsla(174, 62%, 47%, 1); text-decoration: underline"
+            >Terms of Use</strong
+          >
+          and our
+          <strong
+            style="color: hsla(174, 62%, 47%, 1); text-decoration: underline"
+            >Privacy Policy</strong
+          >
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

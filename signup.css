@@ -1,0 +1,501 @@
+/* CSS RESET */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Poppins", "Sofia Pro", "Brown L", "Brown M",
+    "Brown B" sans-serif;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MAIN CSS */
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("./public/assets/sofiapro.otf");
+}
+
+@font-face {
+  font-family: "Brown M";
+  src: url("./public/assets/brown_medium_regular.ttf");
+}
+
+@font-face {
+  font-family: "Brown B";
+  src: url("./public/assets/brown_bold.ttf");
+}
+
+@font-face {
+  font-family: "Brown L";
+  src: url("./public/assets/brown_light_regular.ttf");
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 100vh;
+  background: rgba(46, 194, 179, 0.04);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  height: 679px;
+  margin-inline: 140px;
+  margin-block-start: 81px;
+  margin-block-end: 80px;
+}
+
+.mobile_s {
+  display: none;
+}
+/* LEFT STYLES */
+
+.left-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 124px;
+  margin-right: 120px;
+}
+
+.left > .left-wrapper > img {
+  width: 77.333px;
+  height: 80px;
+  object-fit: cover;
+  margin-block-end: -10px;
+}
+
+.left > .left-wrapper > h1 {
+  margin-block-start: 50px;
+  font-family: Brown B;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 125% */
+  letter-spacing: -0.8px;
+}
+
+.left > .left-wrapper > p {
+  margin-block-start: 20px;
+  margin-block-end: 30px;
+  min-width: 460px;
+  height: 75px;
+  font-family: Brown L;
+  font-weight: lighter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  /* 156.25% */
+}
+
+/* RIGHT STYLES */
+
+.card {
+  background-color: white;
+  min-width: 100%;
+  height: 100%;
+  padding-block-start: 40px;
+  padding-block-end: 40px;
+  padding-inline: 40px;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  border-radius: 6px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  font-family: Sofia Pro;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+input {
+  padding-left: 16px;
+  padding-right: 52px;
+  padding-block: 14px;
+  min-width: 238px;
+  height: 48px;
+  margin-block-start: 5px;
+  font-family: Sofia Pro;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 94%, 1);
+}
+
+input:focus {
+  border-color: hsla(174, 62%, 47%, 1);
+  outline: none;
+  border-radius: 2px;
+}
+
+select {
+  min-width: 238px;
+  height: 48px;
+  margin-block-start: 5px;
+  font-family: Sofia Pro;
+  border-radius: 2px;
+  border: 1px solid hsla(0, 0%, 94%, 1);
+}
+
+.span_two {
+  grid-column: span 2;
+  width: 100%;
+}
+
+::placeholder {
+  padding-block-start: 14px;
+  padding-block-end: 14px;
+  font-size: 14px;
+  font-family: Sofia Pro;
+  color: hsla(0, 0%, 45%, 1);
+}
+
+/* FOR PUTTING THE ICONS INLINE WITH THE INPUT */
+
+/* GENDER */
+
+.select_container_g > .span_two {
+  appearance: none;
+  padding-left: 16px;
+  padding-block: 14px;
+  color: hsla(0, 0%, 45%, 1);
+}
+
+.select_container_g {
+  position: relative;
+}
+
+.icon_container_g {
+  position: absolute;
+  left: 206px;
+  top: 19px;
+  height: 100%;
+}
+
+/* ACTIVITY LEVEL */
+
+.select_container_a > .span_two {
+  appearance: none;
+  padding-left: 16px;
+  padding-block: 14px;
+  color: hsla(0, 0%, 45%, 1);
+}
+
+.select_container_a {
+  position: relative;
+}
+
+.icon_container_a {
+  position: absolute;
+  left: 468px;
+  top: 19px;
+  height: 100%;
+}
+
+/* PASSWORD */
+
+.input_container_p {
+  position: relative;
+}
+
+.icon_container_p {
+  position: absolute;
+  left: 468px;
+  top: 19px;
+  height: 100%;
+}
+
+/* DATE OF BIRTH */
+
+.date_dob {
+  appearance: none;
+  padding-inline: 16px;
+  color: hsla(0, 0%, 45%, 1);
+}
+
+.date_container {
+  position: relative;
+}
+
+.icon_container_d {
+  position: absolute;
+  left: 206px;
+  top: 17px;
+  height: 100%;
+}
+
+button {
+  padding-inline: 219px;
+  padding-block-start: 16px;
+  padding-block-end: 16px;
+  margin-block-end: 16px;
+  background-color: hsla(174, 62%, 47%, 1);
+  border: none;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-family: Sofia Pro;
+  cursor: pointer;
+}
+
+.right > .card > p {
+  padding-left: 18px;
+  padding-right: 19px;
+  font-family: Sofia Pro;
+}
+
+.right {
+  max-width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+  .desktop_s {
+    display: none;
+  }
+
+  .mobile_s {
+    display: block;
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0; */
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-inline: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding-inline: 0px;
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+  }
+
+  .right {
+    margin-inline: 24px;
+    max-width: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding-block-start: 24px;
+    padding-block-end: 30px;
+    padding-inline: 16px;
+    margin-block-end: 24px;
+    margin-block-start: 0px;
+    height: auto;
+  }
+
+  input {
+    width: 100%;
+    height: 48px;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    height: 48px;
+    padding-inline: 16px;
+    margin-block-end: 0px;
+  }
+
+  .right > p.mobile_s {
+    margin-block-end: 64px;
+    font-size: 14px;
+    min-width: 100%;
+    height: 50px;
+    /* 156.25% */
+  }
+
+  .left-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-block-end: 0px;
+    margin-block-start: 74px;
+    margin-inline: 24px;
+  }
+
+  .left > .left-wrapper > img {
+    width: 38.667px;
+    height: 40px;
+    margin-block-end: 0px;
+  }
+
+  .left > .left-wrapper > h1 {
+    min-width: 100%;
+    margin-block-start: 40px;
+    padding-block-end: 0px;
+    font-family: Brown B;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px; /* 125% */
+    letter-spacing: -0.8px;
+  }
+
+  .left > .left-wrapper > p.mobile_s {
+    font-size: 16px;
+    min-width: 100%;
+    display: block;
+    margin-block-end: 40px;
+    margin-block-start: 12px;
+    line-height: 25px;
+    /* 156.25% */
+  }
+
+  /* FOR PUTTING THE ICONS INLINE WITH THE INPUT */
+
+  /* GENDER */
+
+  .select_container_g > .span_two {
+    appearance: none;
+    padding-left: 16px;
+    padding-block: 14px;
+  }
+
+  .select_container_g {
+    position: relative;
+  }
+
+  .icon_container_g {
+    position: absolute;
+    left: 263px;
+    top: 19px;
+    height: 100%;
+  }
+
+  /* ACTIVITY LEVEL */
+
+  .select_container_a > .span_two {
+    appearance: none;
+    padding-left: 16px;
+    padding-block: 14px;
+  }
+
+  .select_container_a {
+    position: relative;
+  }
+
+  .icon_container_a {
+    position: absolute;
+    left: 263px;
+    top: 19px;
+    height: 100%;
+  }
+
+  /* PASSWORD */
+
+  .input_container_p {
+    position: relative;
+  }
+
+  .icon_container_p {
+    position: absolute;
+    left: 263px;
+    top: 19px;
+    height: 100%;
+  }
+
+  /* DATE OF BIRTH */
+
+  .date_dob {
+    appearance: none;
+    padding-inline: 16px;
+  }
+
+  .date_container {
+    position: relative;
+  }
+
+  .icon_container_d {
+    position: absolute;
+    left: 263px;
+    top: 17px;
+    height: 100%;
+  }
+}
