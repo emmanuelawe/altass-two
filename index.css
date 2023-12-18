@@ -70,22 +70,22 @@ h6 {
 
 @font-face {
   font-family: "Sofia Pro";
-  src: url("./public/assets/sofiapro.otf");
+  src: url("./sofiapro.otf");
 }
 
 @font-face {
   font-family: "Brown M";
-  src: url("./public/assets/brown_medium_regular.ttf");
+  src: url("./brown_medium_regular.ttf");
 }
 
 @font-face {
   font-family: "Brown B";
-  src: url("./public/assets/brown_bold.ttf");
+  src: url("./brown_bold.ttf");
 }
 
 @font-face {
   font-family: "Brown L";
-  src: url("./public/assets/brown_light_regular.ttf");
+  src: url("./brown_light_regular.ttf");
 }
 
 body {
@@ -137,6 +137,7 @@ body {
 }
 
 .left > .left-wrapper > p {
+  color: hsla(0, 0%, 45%, 1);
   margin-block-start: 20px;
   margin-block-end: 30px;
   min-width: 460px;
@@ -419,6 +420,7 @@ button {
   }
 
   .left > .left-wrapper > p.mobile_s {
+    color: hsla(0, 0%, 45%, 1);
     font-size: 16px;
     min-width: 100%;
     display: block;
